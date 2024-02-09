@@ -1,0 +1,1 @@
+This project aims to provide a safe and easy way to reach out to the NGOs and donate your things directly to them.
