@@ -3,7 +3,7 @@ import { ABI, Contract } from "../contracts/donte";
 import { ethers } from "ethers";
 import Donate from "../block-components/Donate";
 import donate from "../assets/don.jpg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 // import FatchMemo from "./block-components/FatchMemo";
 
 function Payment() {
@@ -54,25 +54,27 @@ function Payment() {
     //   </div>
     // </div>
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
-  <div style={{ flex: "1", display: "flex" }}>
-    <div style={{ flex: "3" }}>
-    
-      <img src={donate} className="img-fluid" alt=".." style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-    </div>
-    <div style={{ flex: "1", backgroundColor: "#EFEFEF" , height:"100%"}}>
-    <Link to="/" className="ml-2 text-left text-black">
-      <h1 className="px-4 py-2 bg-blue-500 text-white rounded cursor-pointer hover:bg-blue-600 inline-block">
-  Back to homepage
-</h1>
-
-      </Link>
-      <div className="container" style={{ padding: "20px" }}>
-        <Donate state={state} />
+      <div style={{ flex: "1", display: "flex" }}>
+        <div style={{ flex: "3" }}>
+          <img
+            src={donate}
+            className="img-fluid"
+            alt=".."
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        </div>
+        <div style={{ flex: "1", backgroundColor: "#EFEFEF", height: "100%" }}>
+          <Link to="/" className="ml-2 text-left text-black">
+            <h1 className="px-4 py-2 bg-blue-500 text-white rounded cursor-pointer hover:bg-blue-600 inline-block">
+              Back to homepage
+            </h1>
+          </Link>
+          <div className="container" style={{ padding: "20px" }}>
+            <Donate state={state} />
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
   );
 }
 
