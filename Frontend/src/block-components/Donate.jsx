@@ -166,49 +166,35 @@ const Donate = ({ state }) => {
 
   return (
     <>
-      <div className="flex justify-center items-center h-screen">
-        <div className="container mx-auto px-4 py-8 bg-gray-100 rounded-lg shadow-lg">
-          <form onSubmit={DonateNow} className="max-w-md mx-auto">
-            <div className="mb-6">
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Your Name
-              </label>
-              <input
-                type="text"
-                className="form-input mt-1 block w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
-                id="name"
-                placeholder="Enter your name"
-                required
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Your Message
-              </label>
-              <textarea
-                className="form-textarea mt-1 block w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
-                id="message"
-                rows="4"
-                placeholder="Enter your message"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              disabled={!state.contract}
-            >
-              Donate Now
-            </button>
-          </form>
-        </div>
-      </div>
+      <div className="container mx-auto px-4 py-8 bg-gray-100 rounded-lg shadow-lg flex justify-center items-center h-full">
+  <form onSubmit={DonateNow} className="max-w-md">
+    <div className="mb-4">
+      <label htmlFor="name" className="block text-black">Name</label>
+      <input
+        type="text"
+        className="form-input mt-1 block w-full border-gray-300 rounded-md focus:border-blue-400 focus:outline-none focus:ring"
+        id="name"
+        placeholder="Enter Your Name"
+      />
+    </div>
+    <div className="mb-6">
+      <label htmlFor="message" className="block text-black">Message</label>
+      <textarea
+        type="text"
+        className="form-textarea mt-1 block w-full border-gray-300 rounded-md focus:border-blue-400 focus:outline-none focus:ring"
+        id="message"
+        placeholder="Enter Your Message"
+      />
+    </div>
+    <button
+      type="submit"
+      className="w-full bg-[#d25f5f] text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+      disabled={!state.contract}
+    >
+      Pay
+    </button>
+  </form>
+</div>
 
       <FatchMemo state={state} />
     </>

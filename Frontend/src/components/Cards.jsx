@@ -80,6 +80,7 @@ const Cards = () => {
           <button className="bg-[#d25f5f] w-full max-w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3 block">
             Learn More
           </button>
+
         </div>
 
         <div className="shadow-xl bg-gray-100 flex flex-col p-4 rounded-lg hover:scale-105 duration-300">

@@ -9,6 +9,17 @@ const Navbar = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
+
+  // Function to check login status
+  const checkLoginStatus = () => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
 
   return (
     <div className="flex justify-between items-center h-20 mx-auto px-4 text-white bg-black bg-opacity-0 w-full">

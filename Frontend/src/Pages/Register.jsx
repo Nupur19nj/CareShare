@@ -1,82 +1,7 @@
-// // Register.jsx
-// import React, { useState } from "react";
-// // import axios from "axios";
-
-// const Register = () => {
-//   const [name, setName] = useState("");
-//   const [contact, setContact] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [error, setError] = useState("");
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     try {
-//       const body = { name, contact, password };
-//       console.log(body);
-//       fetch("http://localhost:4000/api/v1/register", {
-//         method: "POST",
-//         crossDomain: true,
-//         headers: {
-//           "Content-Type": "application/json",
-//           Accept: "application/json",
-//           "Access-Control-Allow-Origin": "*",
-//         },
-//         body: JSON.stringify(body), // Pass the corrected body object here
-//       })
-//         .then((res) => res.json())
-//         .then((data) => console.log(data));
-//     } catch (error) {
-//       setError(error); // Set error message
-//     }
-//   };
-
-//   return (
-//     <div className="max-w-md mx-auto mt-8">
-//       <h2 className="text-2xl font-bold mb-4">Register</h2>
-//       {error && (
-//         <div className="bg-red-100 text-red-600 p-2 rounded mb-4">{error}</div>
-//       )}
-//       {/* {"Enter valid values."} */}
-//       {/* Display error message */}
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           placeholder="Name"
-//           value={name}
-//           onChange={(e) => setName(e.target.value)}
-//           required
-//           className="border border-gray-300 rounded mb-2 p-2 w-full"
-//         />
-//         <input
-//           type="tel"
-//           placeholder="Contact"
-//           value={contact}
-//           onChange={(e) => setContact(e.target.value)}
-//           required
-//           className="border border-gray-300 rounded mb-2 p-2 w-full"
-//         />
-//         <input
-//           type="password"
-//           placeholder="Password"
-//           value={password}
-//           onChange={(e) => setPassword(e.target.value)}
-//           required
-//           className="border border-gray-300 rounded mb-2 p-2 w-full"
-//         />
-//         <button
-//           type="submit"
-//           className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-//         >
-//           Register
-//         </button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Register;
-// Register.jsx
 import React, { useState } from "react";
+import hand from "../assets/hand.jpg";
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -84,68 +9,78 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e) => {
-    // Added async keyword
-    e.preventDefault();
+  const handleRegister = async () => {
     try {
-      const body = { name, contact, password };
-      console.log(body);
-      const response = await fetch("http://localhost:4000/api/v1/register", {
-        // Wait for the fetch request to complete
-        method: "POST",
-        crossDomain: true,
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-        body: JSON.stringify(body),
+      const response = await axios.post("http://localhost:4000/api/v1/register", {
+        name,
+        contact,
+        password,
       });
-      const data = await response.json(); // Wait for parsing the response JSON
-      console.log(data);
+      const { token, user } = response.data;
+      // Store token or user information in localStorage
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
+      // Redirect user to home ("/") upon successful registration
+      window.location.href = "/";
     } catch (error) {
-      setError(error.message); // Set error message
+      alert("Invalid credentials");
+      console.error("Error:", error); // Log and handle the error
+      setError(error.response.data.message); // Set error message
     }
   };
 
   return (
-    <div className="max-w-md mx-auto mt-8">
-      <h2 className="text-2xl font-bold mb-4">Register</h2>
-      {error && (
-        <div className="bg-red-100 text-red-600 p-2 rounded mb-4">{error}</div>
-      )}
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          className="border border-gray-300 rounded mb-2 p-2 w-full"
-        />
-        <input
-          type="tel"
-          placeholder="Contact"
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
-          required
-          className="border border-gray-300 rounded mb-2 p-2 w-full"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          className="border border-gray-300 rounded mb-2 p-2 w-full"
-        />
-        <button
-          type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-        >
-          Register
-        </button>
-      </form>
+    <div className="flex">
+      {/* Left Section */}
+      <div className="w-1/2 h-screen flex justify-center items-center">
+        <img src={hand} alt="Girl" className="max-w-sm" />
+      </div>
+
+      {/* Right Section */}
+      <div className="w-1/2 h-screen bg-gray-100 flex flex-col justify-center items-center">
+        <div className="max-w-md mx-auto">
+          <h2 className="text-2xl font-bold mb-4 text-center">Register</h2>
+          {error && (
+            <div className="bg-red-100 text-red-600 p-2 rounded mb-4">{error}</div>
+          )}
+          <form onSubmit={(e) => {
+              e.preventDefault();
+              handleRegister();
+            }}>
+            <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              className="border border-gray-300 rounded mb-2 p-2 w-full"
+            />
+            <input
+              type="tel"
+              placeholder="Contact"
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
+              required
+              className="border border-gray-300 rounded mb-2 p-2 w-full"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="border border-gray-300 rounded mb-2 p-2 w-full"
+            />
+            <button
+              type="submit"
+              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full mb-2"
+            >
+              Register
+            </button>
+            <p className="text-sm text-gray-600">Already have an account? <Link to="/login" className="text-blue-500">Login here</Link></p>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
