@@ -5,6 +5,7 @@ import Food from "./Pages/Food";
 import Books from "./Pages/Books";
 import Clothing from "./Pages/Clothing";
 import Ngo from "./Pages/Ngo";
+import Payment from "./Pages/Payment";
 function App() {
   return (
       <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
           <Route path="/Books" element={<Books />}/>
           <Route path="/Clothing`" element={<Clothing/>}/>
           <Route path="/Ngo" element={<Ngo/>}/>
+          <Route path="/Payment" element={<Payment/>}/>
         </Routes>
       </BrowserRouter>
   );

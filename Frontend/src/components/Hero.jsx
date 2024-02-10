@@ -16,6 +16,7 @@ const Hero = () => {
         <p className='text-[#d25f5f] font-bold p-2 text-xl'>
           Join us for
         </p>
+        <Link to="/Payment">Start payment</Link>
         <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold md:py-6'>
           Easy donation for the people in need!
         </h1>
