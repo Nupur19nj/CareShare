@@ -30,6 +30,8 @@ const Hero = () => {
                 <li onClick={() => handleCategorySelect('Clothing')} className="py-2 px-4 cursor-pointer hover:bg-gray-200">Clothing</li>
                 <li onClick={() => handleCategorySelect('Food')} className="py-2 px-4 cursor-pointer hover:bg-gray-200">Food</li>
                 <li onClick={() => handleCategorySelect('Books')} className="py-2 px-4 cursor-pointer hover:bg-gray-200">Books</li>
+                <li onClick={() => handleCategorySelect('Education')} className="py-2 px-4 cursor-pointer hover:bg-gray-200">Education</li>
+                <li onClick={() => handleCategorySelect('Monetary')} className="py-2 px-4 cursor-pointer hover:bg-gray-200">Monetary</li>
                 {/* Add more categories as needed */}
               </ul>
             </div>
@@ -38,7 +40,7 @@ const Hero = () => {
             {showDropdown ? 'Close Categories' : 'See Categories'}
           </button>
           {selectedCategory && (
-            <Link to={`/dashboard/${selectedCategory}`}>
+            <Link to={`/${selectedCategory}`}>
               <button className='bg-[#d25f5f]  w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
                 View {selectedCategory} Category
               </button>

@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NGOsData from './data.json';
 
-const Clothing = () => {
-  const booksNGOs = NGOsData.filter(ngo => ngo.category.includes("Clothing"));
+const Monetary = () => {
+  const booksNGOs = NGOsData.filter(ngo => ngo.category.includes("Monetary"));
 
   return (
     <div className="text-black text-center">
@@ -27,4 +27,4 @@ const Clothing = () => {
   )
 }
 
-export default Clothing;
+export default Monetary;
