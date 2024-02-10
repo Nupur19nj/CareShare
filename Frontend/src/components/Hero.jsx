@@ -1,13 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
 
+  // Function to check login status
+  const checkLoginStatus = () => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
+
+  // Call the function to check login status when the component mounts
+  useEffect(() => {
+    checkLoginStatus();
+  }, []);
+
+  // Function to handle category selection
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
     setShowDropdown(false);
+  };
+
+  // Function to handle logout
+  const handleLogout = () => {
+    localStorage.removeItem('token'); // Remove token from localStorage
+    setIsLoggedIn(false); // Update login status
   };
 
   return (
@@ -16,7 +39,7 @@ const Hero = () => {
         <p className='text-[#d25f5f] font-bold p-2 text-xl'>
           Join us for
         </p>
-        <Link to="/Payment">Start payment</Link>
+        {isLoggedIn && <Link to="/Payment">Start payment</Link>}
         <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold md:py-6'>
           Easy donation for the people in need!
         </h1>
@@ -36,15 +59,29 @@ const Hero = () => {
               </ul>
             </div>
           )}
-          <button onClick={() => setShowDropdown(!showDropdown)} className='bg-[#d25f5f]  w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
-            {showDropdown ? 'Close Categories' : 'See Categories'}
-          </button>
-          {selectedCategory && (
+          {isLoggedIn && (
+            <button onClick={() => setShowDropdown(!showDropdown)} className='bg-[#d25f5f]  w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
+              {showDropdown ? 'Close Categories' : 'See Categories'}
+            </button>
+          )}
+          {selectedCategory && isLoggedIn && (
             <Link to={`/${selectedCategory}`}>
               <button className='bg-[#d25f5f]  w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
                 View {selectedCategory} Category
               </button>
             </Link>
+          )}
+          {!isLoggedIn && (
+            <Link to="/register">
+              <button className='bg-[#d25f5f]  w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
+                Login/Sign-up
+              </button>
+            </Link>
+          )}
+          {isLoggedIn && (
+            <button onClick={handleLogout} className='bg-[#d25f5f]  w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
+              Logout
+            </button>
           )}
         </div>
       </div>
