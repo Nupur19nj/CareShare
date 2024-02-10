@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 import Donate from "../block-components/Donate";
 import donate from "../assets/don.jpg";
 import { Link } from "react-router-dom";
+import { AiOutlineHome } from "react-icons/ai";
 // import FatchMemo from "./block-components/FatchMemo";
 
 function Payment() {
@@ -65,8 +66,12 @@ function Payment() {
         </div>
         <div style={{ flex: "1", backgroundColor: "#EFEFEF", height: "100%" }}>
           <Link to="/" className="ml-2 text-left text-black">
-            <h1 className="px-4 py-2 bg-blue-500 text-white rounded cursor-pointer hover:bg-blue-600 inline-block">
-              Back to homepage
+            {/* Replaced text with home icon */}
+            <h1 className="px-4 py-2 text-black rounded cursor-pointer  inline-block">
+              <AiOutlineHome
+                className="inline-block mr-2"
+                style={{ fontSize: "1.8rem" }}
+              />
             </h1>
           </Link>
           <div className="container" style={{ padding: "20px" }}>

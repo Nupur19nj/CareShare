@@ -1,13 +1,14 @@
 [
   {
-    "id":0,
+    "id": 0,
     "name": "Center for Environment Education",
     "address": "Nehru Foundation for Development Thaltej Tekra, Ahmedabad - 380 054",
-    "contact": 3692581470,
+    "contact": 9825222525,
     "about": "Center for Environment Education (CEE) is a renowned NGO dedicated to environmental education, disaster preparedness, and community empowerment. Through innovative programs and partnerships, we strive to educate children and youth about environmental conservation while fostering a culture of preparedness for disasters. Our initiatives aim to create a sustainable future where communities thrive in harmony with nature. Join us in our mission to protect the environment and build resilient communities.",
-    "category": ["Clothing","Education", "Books"],
+    "category": ["Clothing", "Education", "Books"],
     "images": [
       "https://www.ceeindia.org/images/logo.png",
+      "./cee_logo.jpg",
       "./src/assets/ngo_images/edu_0.jpg",
       "./src/assets/ngo_images/edu_1.jpg"
     ],
@@ -16,10 +17,10 @@
     "receivers": "200+"
   },
   {
-    "id":1,
+    "id": 1,
     "name": "A J CHARITABLE TRUST",
     "address": "62, JANTANAGAR , NEAR POST OFFICE, RAMOL VANCH, AHMEDABAD 382449",
-    "contact": 9876543210,
+    "contact": 9825222525,
     "about": "NGO A J CHARITABLE TRUST is dedicated to providing food and shelter to homeless people in our community.",
     "category": ["Food", "Clothing", "Monetary"],
     "images": [
@@ -34,10 +35,10 @@
     "receivers": "200+"
   },
   {
-    "id":2,
+    "id": 2,
     "name": "NGO XYZ",
     "address": "456 Oak Avenue, Townsville",
-    "contact": 1234567890,
+    "contact": 9825222525,
     "about": "NGO XYZ aims to provide clothing to underprivileged children in rural areas.",
     "category": ["Clothing", "Food"],
     "images": [
@@ -52,10 +53,10 @@
     "receivers": "200+"
   },
   {
-    "id":3,
+    "id": 3,
     "name": "NGO DEF",
     "address": "321 Pine Road, Countryside",
-    "contact": 7418529630,
+    "contact": 9825222525,
     "about": "NGO DEF works towards environmental conservation and wildlife protection.",
     "category": ["Books"],
     "images": [
@@ -68,10 +69,11 @@
     "receivers": "200+"
   },
 
-  { "id":4,
+  {
+    "id": 4,
     "name": "Arpan Education and Charitable Trust",
     "address": "Initiatives for Equity in DevelopmentO/102 Nandanvan V,Near Prerana Tirth Dehrasar, Jodhpur, Ahmedabad 380 015",
-    "contact": 9876543210,
+    "contact": 9825222525,
     "about": "NGO PQR focuses on promoting literacy by providing free books to schools in remote areas.",
     "category": ["Books", "Clothing"],
     "images": [
@@ -84,10 +86,11 @@
     "helpers": "20+",
     "receivers": "200+"
   },
-  {"id":5,
+  {
+    "id": 5,
     "name": "Sanchetana Community Health and Research Centre",
     "address": "O-45, NewYork Trade CentreNr. Thaltej Cross RoadAhmedabad - 380054",
-    "contact": 1593574860,
+    "contact": 9825222525,
     "about": "Sanchetana Community Health and Research Centre is a beacon of hope for underserved communities, striving tirelessly to uplift and empower through comprehensive programs focused on child welfare, education, health, and human rights. Located at the heart of marginalized regions, our center serves as a catalyst for positive change, advocating for the rights and well-being of every individual regardless of socio-economic status.",
     "category": ["Education", "Books", "Food"],
     "images": [
