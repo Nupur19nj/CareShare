@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -40,33 +41,34 @@
 
 main {
   text-align: center;
-  margin-left: 250px; 
+  margin-left: 250px;
   padding: 20px;
-  padding-bottom: 60px; 
+  padding-bottom: 60px;
   box-sizing: border-box;
-  overflow: auto; 
+  overflow: auto;
 }
 
-.main_greeting{
+.main_greeting {
   font-size: 40px;
 }
 
-.dark-app{
+.dark-app {
   background-color: #1a1a1a;
   color: #fff;
 }
 
-.footer_section{
-  background-color:#7E4DAC; /* Same color for both sections */
-  margin-left: 200px; 
+.footer_section {
+  background-color: #7E4DAC;
+  /* Same color for both sections */
+  margin-left: 200px;
 }
 
-.dashBoard_Nav{
+.dashBoard_Nav {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
-.displayAccount{
+.displayAccount {
   border: 2px solid white;
   border-radius: 25px;
   font-size: small;

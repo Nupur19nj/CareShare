@@ -92,7 +92,9 @@ const Hero = () => {
             </div>
           )}
           {selectedCategory && (
+
             <Link to={`/${selectedCategory}`}>
+
               <button className="bg-[#d25f5f] text-white px-6 py-3 rounded-md font-medium mt-4 transition duration-300 hover:bg-opacity-80">
                 View {selectedCategory} Category
               </button>

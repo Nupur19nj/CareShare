@@ -4,7 +4,8 @@ import { ethers } from "ethers";
 import Donate from "../block-components/Donate";
 import donate from "../assets/don.jpg";
 import { Link } from "react-router-dom";
-import { AiOutlineHome } from 'react-icons/ai';
+import { AiOutlineHome } from "react-icons/ai";
+// import FatchMemo from "./block-components/FatchMemo";
 
 function Payment() {
   const [state, setState] = useState({
@@ -51,6 +52,8 @@ function Payment() {
       </h1>
     </Link>
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+
+
   <div style={{ flex: "1", display: "flex" }}>
     <div style={{ flex: "2" }}>
       <img
@@ -64,6 +67,7 @@ function Payment() {
       <div className="container" style={{ padding: "5px", margin: "auto" }}>
         <h1 className="text-black text-bold text-center mb-4 text-2xl">Send monetary via this form</h1>
         <Donate state={state} />
+
       </div>
     </div>
   </div>

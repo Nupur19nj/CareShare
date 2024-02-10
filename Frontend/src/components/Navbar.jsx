@@ -62,7 +62,7 @@ const Navbar = () => {
         >
           Contact
         </ScrollLink>
-         <Link
+        <Link
           to="/Payment"
           spy={true}
           smooth={true}
