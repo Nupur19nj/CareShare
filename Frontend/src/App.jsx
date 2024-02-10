@@ -7,6 +7,7 @@ import Clothing from "./Pages/Clothing";
 import Ngo from "./Pages/Ngo";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
+import Payment from "./Pages/Payment";
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Ngo" element={<Ngo />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/Payment" element={<Payment />} />
       </Routes>
     </BrowserRouter>
   );
