@@ -23,6 +23,8 @@ function App() {
         <Route path="/Payment" element={<Payment />} />
         <Route path="/Monetary" element={<Monetary />} />
         <Route path="/Education" element={<Education />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
