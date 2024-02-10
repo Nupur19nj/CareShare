@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Vision from "../components/Vision";
 import Cards from "../components/Cards";
 import Footer from "../components/Footer";
@@ -8,14 +8,15 @@ import FeedbackForm from "../components/Feedback";
 
 const Home = () => {
   return (
-   <>
+    <>
       <Navbar />
       <Hero />
       <Vision />
       <Cards />
       <FeedbackForm />
-      <Footer /></>
-  )
-}
+      <Footer />
+    </>
+  );
+};
 
-export default Home
+export default Home;
