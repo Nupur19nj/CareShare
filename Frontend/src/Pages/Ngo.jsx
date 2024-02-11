@@ -18,7 +18,7 @@ const Ngo = () => {
       <div className="h-screen">
         <div
           style={{ display: "flex", flexDirection: "column", height: "100%" }}
-          className=" bg-green-100"
+          className=" bg-[#fff]"
         >
           <Link to="/" className="ml-2 text-left text-black">
             {/* Replaced text with home icon */}
