@@ -13,7 +13,7 @@ const Navbar = () => {
 
   // Function to check login status
   const checkLoginStatus = () => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (token) {
       setIsLoggedIn(true);
     } else {
@@ -24,7 +24,8 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center h-20 mx-auto px-4 text-white bg-black bg-opacity-0 w-full">
       {/* <h1 className='w-full text-3xl font-bold text-[#D298D3] '><img src={image} width={500} height={500}></img></h1> */}
-      <h1 className="text-white font-bold italic text-3xl">CareShare</h1>
+      <img src="../../public/logo2.png" className="w-20 h-20" />
+      {/* <h1 className="text-white font-bold italic text-3xl">CareShare</h1> */}
       <div className="flex items-center p-2 gap-5 text-white">
         <ScrollLink
           to="home"

@@ -11,6 +11,7 @@ const Footer = () => {
   return (
     <div className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-white">
       <div>
+        <img src="../../public/logo2.png" className="w-24 h-24" />
         <h1 className="text-white font-bold italic text-3xl">CareShare</h1>
 
         <p className="py-6 text-sm">

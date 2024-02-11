@@ -10,7 +10,7 @@ const Books = () => {
       <h1 className="text-3xl font-bold pt-5 mt-6">
         NGOs currently accepting Books near you
       </h1>
-      <div className="grid grid-cols-3 gap-12 mt-12 ml-12 mr-12 ">
+      <div className="grid grid-cols-4 gap-12 mt-12 ml-12 mr-12 ">
         {booksNGOs.map((ngo, index) => (
           <div key={index} className="relative">
             <div
