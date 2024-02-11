@@ -15,8 +15,7 @@ const Footer = () => {
         <h1 className="text-white font-bold italic text-3xl">CareShare</h1>
 
         <p className="py-6 text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit ullam
-          iste repellat consequatur libero reiciendis, blanditiis accusantium.
+        A dynamic online platform designed to bridge the gap between NGOs and individuals willing to contribute to social causes through donations. The platform facilitates seamless interaction, donation listings, and pickup coordination, ensuring a transparent and efficient donation process.
         </p>
         <div className="flex justify-between md:w-[75%] my-6">
           <FaFacebookSquare size={30} />

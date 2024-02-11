@@ -70,7 +70,7 @@ const Ngo = () => {
         </div>
       </div>
       <div className=" bg-green-100 text-center">
-        <h1 className="text-3xl text-bold p-5">
+        <h1 className="text-2xl text-bold p-5 mt-5">
           See the happiness of our receivers
         </h1>
         <div className="grid grid-cols-4 gap-4 mt-4 ml-4 mr-4">

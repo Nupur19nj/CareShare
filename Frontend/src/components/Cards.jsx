@@ -63,7 +63,7 @@
 // export default Cards;
 import React from "react";
 import secure from "../assets/secure.png";
-import Msg from "../assets/msg.jpg";
+import Msg from "../assets/charity.jpg";
 import don from "../assets/don.jpg";
 
 const Cards = () => {
@@ -72,7 +72,7 @@ const Cards = () => {
       <div className="max-w-[1240px] mx-auto grid gap-12 my-20 md:grid-cols-3">
         <div className="shadow-xl bg-gray-100 flex flex-col p-4 rounded-lg hover:scale-105 duration-300">
           <h2 className="text-2xl text-black font-bold text-center py-8">
-            Messaging System
+            Categorized donation
           </h2>
           <div className="flex-grow">
             <img className="w-full mx-auto bg-white h-full" src={Msg} alt="/" />
@@ -85,7 +85,7 @@ const Cards = () => {
 
         <div className="shadow-xl bg-gray-100 flex flex-col p-4 rounded-lg hover:scale-105 duration-300">
           <h2 className="text-2xl text-black font-bold text-center py-8">
-            Secure Communication
+            Secure Transaction
           </h2>
           <div className="flex-grow">
             <img
