@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import hand from "../assets/hand.jpg";
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -11,11 +11,14 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post("http://localhost:4000/api/v1/register", {
-        name,
-        contact,
-        password,
-      });
+      const response = await axios.post(
+        "http://localhost:4000/api/v1/register",
+        {
+          name,
+          contact,
+          password,
+        }
+      );
       const { token, user } = response.data;
       // Store token or user information in localStorage
       localStorage.setItem("token", token);
@@ -41,12 +44,16 @@ const Register = () => {
         <div className="max-w-md mx-auto">
           <h2 className="text-2xl font-bold mb-4 text-center">Register</h2>
           {error && (
-            <div className="bg-red-100 text-red-600 p-2 rounded mb-4">{error}</div>
+            <div className="bg-red-100 text-red-600 p-2 rounded mb-4">
+              {error}
+            </div>
           )}
-          <form onSubmit={(e) => {
+          <form
+            onSubmit={(e) => {
               e.preventDefault();
               handleRegister();
-            }}>
+            }}
+          >
             <input
               type="text"
               placeholder="Name"
@@ -73,11 +80,16 @@ const Register = () => {
             />
             <button
               type="submit"
-              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full mb-2"
+              className="bg-[#3b0000] text-white py-2 px-4 rounded hover:bg-[#9b1515] w-full mb-2"
             >
               Register
             </button>
-            <p className="text-sm text-gray-600">Already have an account? <Link to="/login" className="text-blue-500">Login here</Link></p>
+            <p className="text-sm text-gray-600">
+              Already have an account?{" "}
+              <Link to="/login" className="text-[#3b0000] font-bold">
+                Login here
+              </Link>
+            </p>
           </form>
         </div>
       </div>

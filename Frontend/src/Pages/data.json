@@ -101,5 +101,108 @@
     "impact": "In the past year alone, Sanchetana Community Health and Research Centre has: Provided healthcare services to over 5,000 individuals, including immunizations, prenatal care, and treatment for common illnesses.",
     "helpers": "20+",
     "receivers": "200+"
+  },
+  {
+    "id": 6,
+    "name": "Center for Environment Education",
+    "address": "Nehru Foundation for Development Thaltej Tekra, Ahmedabad - 380 054",
+    "contact": 9825222525,
+    "about": "Center for Environment Education (CEE) is a renowned NGO dedicated to environmental education, disaster preparedness, and community empowerment. Through innovative programs and partnerships, we strive to educate children and youth about environmental conservation while fostering a culture of preparedness for disasters. Our initiatives aim to create a sustainable future where communities thrive in harmony with nature. Join us in our mission to protect the environment and build resilient communities.",
+    "category": ["Clothing", "Education", "Books"],
+    "images": [
+      "https://www.ceeindia.org/images/logo.png",
+      "./cee_logo.jpg",
+      "./src/assets/ngo_images/edu_0.jpg",
+      "./src/assets/ngo_images/edu_1.jpg"
+    ],
+    "impact": "Last month, CEE provided meals to 1000 homeless individuals, conducted disaster preparedness workshops reaching 500 households, and facilitated environmental education programs for 300 children in marginalized communities.",
+    "helpers": "20+",
+    "receivers": "200+"
+  },
+  {
+    "id": 7,
+    "name": "A J CHARITABLE TRUST",
+    "address": "62, JANTANAGAR , NEAR POST OFFICE, RAMOL VANCH, AHMEDABAD 382449",
+    "contact": 9825222525,
+    "about": "NGO A J CHARITABLE TRUST is dedicated to providing food and shelter to homeless people in our community.",
+    "category": ["Food", "Clothing", "Monetary"],
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY-R-bu1Dh-QIwJq9lGdjzChCSLsRzDWI4gVuxp_YwPw&s",
+      "./src/assets/ngo_images/food_1.jpg",
+      "./src/assets/ngo_images/cloth_0.jpg",
+      "./src/assets/ngo_images/food_0.jpg",
+      "./src/assets/ngo_images/cloth_1.jpg"
+    ],
+    "impact": "Provided meals to 1000 homeless individuals last month.",
+    "helpers": "20+",
+    "receivers": "200+"
+  },
+  {
+    "id": 8,
+    "name": "NGO XYZ",
+    "address": "456 Oak Avenue, Townsville",
+    "contact": 9825222525,
+    "about": "NGO XYZ aims to provide clothing to underprivileged children in rural areas.",
+    "category": ["Clothing", "Food"],
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ06RjsMkldT6zFXBJekSbzTThpzSVeGQ55a6o5tCTmQ&s",
+      "./src/assets/ngo_images/food_0.jpg",
+      "./src/assets/ngo_images/cloth_0.jpg",
+      "./src/assets/ngo_images/food_1.jpg",
+      "./src/assets/ngo_images/cloth_1.jpg"
+    ],
+    "impact": "Provided meals to 1000 homeless individuals last month.",
+    "helpers": "20+",
+    "receivers": "200+"
+  },
+  {
+    "id": 9,
+    "name": "NGO DEF",
+    "address": "321 Pine Road, Countryside",
+    "contact": 9825222525,
+    "about": "NGO DEF works towards environmental conservation and wildlife protection.",
+    "category": ["Books"],
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5PnGJuo9dqao_7h7bCyl78U5a8M4wrpI_2y21grKg0A&s",
+      "./src/assets/ngo_images/book_0.jpg",
+      "./src/assets/ngo_images/book_1.jpg"
+    ],
+    "impact": "Provided meals to 1000 homeless individuals last month.",
+    "helpers": "20+",
+    "receivers": "200+"
+  },
+
+  {
+    "id": 10,
+    "name": "Arpan Education and Charitable Trust",
+    "address": "Initiatives for Equity in DevelopmentO/102 Nandanvan V,Near Prerana Tirth Dehrasar, Jodhpur, Ahmedabad 380 015",
+    "contact": 9825222525,
+    "about": "NGO PQR focuses on promoting literacy by providing free books to schools in remote areas.",
+    "category": ["Books", "Clothing"],
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm_UcEGWP_T9Dx-rmkI3ATcMei9NQBaXATEoy6WGWcZw&s",
+      "./src/assets/ngo_images/toys_0.jpg",
+      "./src/assets/ngo_images/cloth_0.jpg",
+      "./src/assets/ngo_images/cloth_1.jpg"
+    ],
+    "impact": "Provided meals to 1000 homeless individuals last month.",
+    "helpers": "20+",
+    "receivers": "200+"
+  },
+  {
+    "id": 11,
+    "name": "Sanchetana Community Health and Research Centre",
+    "address": "O-45, NewYork Trade CentreNr. Thaltej Cross RoadAhmedabad - 380054",
+    "contact": 9825222525,
+    "about": "Sanchetana Community Health and Research Centre is a beacon of hope for underserved communities, striving tirelessly to uplift and empower through comprehensive programs focused on child welfare, education, health, and human rights. Located at the heart of marginalized regions, our center serves as a catalyst for positive change, advocating for the rights and well-being of every individual regardless of socio-economic status.",
+    "category": ["Education", "Books", "Food"],
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr9IIhhZlC9YnQNZyjrKq483lMcM7GCRIOsRCD3or8PQ&s",
+      "./src/assets/ngo_images/edu_0.jpg",
+      "./src/assets/ngo_images/edu_1.jpg"
+    ],
+    "impact": "In the past year alone, Sanchetana Community Health and Research Centre has: Provided healthcare services to over 5,000 individuals, including immunizations, prenatal care, and treatment for common illnesses.",
+    "helpers": "20+",
+    "receivers": "200+"
   }
 ]

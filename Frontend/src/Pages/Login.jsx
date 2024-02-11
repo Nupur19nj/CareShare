@@ -39,7 +39,9 @@ const Login = () => {
         <div className="max-w-md mx-auto">
           <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
           {error && (
-            <div className="bg-red-100 text-red-600 p-2 rounded mb-4">{error}</div>
+            <div className="bg-red-100 text-red-600 p-2 rounded mb-4">
+              {error}
+            </div>
           )}
           <form
             onSubmit={(e) => {
@@ -65,13 +67,13 @@ const Login = () => {
             />
             <button
               type="submit"
-              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full"
+              className="bg-[#3b0000] text-white py-2 px-4 rounded hover:bg-[#9b1515] w-full"
             >
               Login
             </button>
             <p className="text-sm text-gray-600 mt-2">
               Don't have an account?{" "}
-              <Link to="/register" className="text-blue-500">
+              <Link to="/register" className="text-[#3b0000] font-bold">
                 Register here
               </Link>
             </p>
