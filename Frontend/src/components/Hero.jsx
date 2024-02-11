@@ -102,7 +102,7 @@ const Hero = () => {
           )}
         </div>
         {isLoggedIn && (
-            <button onClick={handleLogout} className='bg-[#d25f5f]  w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
+            <button onClick={handleLogout} className='bg-[#d25f5f]  text-white w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
               Logout
             </button>
           )}
